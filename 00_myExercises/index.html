@@ -25,6 +25,9 @@
           <li>
             <a href="#vacation">Planning a Vacation</a>
           </li>
+          <li>
+            <a href="#contact">Contact Me</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -76,31 +79,54 @@
           </aside>
           <br>
           <table>
-            <tr>
-              <th>Time</th>
-              <th>Activity</th>
-            </tr>
-            <tr>
-              <td>
-                <time datetime="08:00">8am</time>
-                -<time datetime="11:00"> 11am</time>
-              </td>
-              <td>Write Code</td>
-            </tr>
-            <tr>
-              <td>
-                <time datetime="1:00">11am</time>
-                -<time datetime="12:00"> 12pm</time>
-              </td>
-              <td>Eat Lunch</td>
-            </tr>
-            <tr>
-              <td>
-                <time datetime="12:00">12pm</time>
-                -<time datetime="17:00"> 5pm</time>
-              </td>
-              <td>Study for Other Courses</td>
-            </tr>
+            <caption>My Daily Schedule</caption>
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th scope="col">Time</th>
+                <th scope="col">Activity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">Morning</td>
+                <td>
+                  <time datetime="08:00">8am</time>
+                  -<time datetime="11:00"> 11am</time>
+                </td>
+                <td>Write Code</td>
+              </tr>
+              <tr>
+                <td scope="row">Break</td>
+                <td>
+                  <time datetime="1:00">11am</time>
+                  -<time datetime="12:00"> 12pm</time>
+                </td>
+                <td>Eat Lunch</td>
+              </tr>
+              <tr>
+                <td scope="row">Afternnon</td>
+                <td>
+                  <time datetime="12:00">12pm</time>
+                  -<time datetime="17:00"> 5pm</time>
+                </td>
+                <td>Study for Other Courses</td>
+              </tr>
+              <tr>
+                <td scope="row">Evening</td>
+                <td rowspan="2">All Other Times</td>
+                <td>Free Time</td>
+              </tr>
+              <tr>
+                <td scope="row">Night</td>
+                <td>Sleep</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">And that's what I do every day, 5 days a week. Just eat, sleep, code... and recharge!</td>
+              </tr>
+            </tfoot>
           </table>
         </section>
       </article>
@@ -158,6 +184,15 @@
               <dd>These are also cold</dd>
             </dl>
         </section>
+        </article>
+        <hr>
+        <article id="contact">
+          <h2>Contact Me</h2>
+          <p>I reaaly like to hear from you!</p>
+          <form action="https://httpbin.org/get" method="get">
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName">
+          </form>
         </article>
     </main>
 
