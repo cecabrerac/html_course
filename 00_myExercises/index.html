@@ -189,55 +189,74 @@
         <article id="contact">
           <h2>Contact Me</h2>
           <p>I reaaly like to hear from you!</p>
-          <form action="https://httpbin.org/get" method="get">
+          <fieldset>
+            <legend>Personal Info</legend>
+            <form action="https://httpbin.org/get" method="get">
+              <p>
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required autofocus>
+              </p>
+              <p>
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Baker" autocomplete="on" required>
+              </p>
+              <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="your secret" required>
+              </p>
+              <p>
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" id="phone" placeholder="5555555555" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+              </p>
+              <p>
+                <label for="decade">Favorite Decade:</label>
+                <input type="number" name="decade" id="decade" min="1950" max="2020" step="10" value="1980">
+              </p>
+              <p>
+                <label for="coffee">Favorite Coffee</label>
+                <select name="coffee" id="coffee" multiple size="5">
+                  <optgroup label="Coffees">
+                    <option value="regular coffee">Regular Coffee</option>
+                    <option value="iced coffee">Iced Coffee</option>
+                  </optgroup>
+                  <optgroup label="Spresso Drinks">
+                    <option value="latte" selected>Latte</option>
+                    <option value="cappuccino">Cappuccino</option>
+                    <option value="cotado">Cortado</option>
+                    <option value="americano">Americano</option>
+                  </optgroup>
+                  <option value="other">Other</option>
+                </select>
+              </p>
+              <!-- <p>
+                <label for="coffee">Favorite Coffee</label>
+                <input type="text" name="coffee" id="coffee" list="coffee-list">
+                <datalist id="coffee-list">
+                  <option value="coffee">
+                  <option value="latte">
+                  <option value="espresso">
+                  <option value="cortado">
+                  <option value="americano">
+                  <option value="other">
+                </datalist>
+              </p> -->
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>What is your favorite food?</legend>
             <p>
-              <label for="firstName">First Name:</label>
-              <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required autofocus>
+              <input type="radio" name="food" id="tacos" value="tacos">
+              <label for="tacos" >Tacos</label>
             </p>
             <p>
-              <label for="lastName">Last Name:</label>
-              <input type="text" name="lastName" id="lastName" placeholder="Baker" autocomplete="on" required>
+              <input type="radio" name="food" id="pizza" value="pizza">
+              <label for="pizza" >Pizza</label>
             </p>
             <p>
-              <label for="password">Password:</label>
-              <input type="password" name="password" id="password" placeholder="your secret" required>
+              <input type="radio" name="food" id="other" value="other">
+              <label for="other" >Other</label>
             </p>
-            <p>
-              <label for="phone">Phone:</label>
-              <input type="tel" name="phone" id="phone" placeholder="5555555555" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
-            </p>
-            <p>
-              <label for="decade">Favorite Decade:</label>
-              <input type="number" name="decade" id="decade" min="1950" max="2020" step="10" value="1980">
-            </p>
-            <p>
-              <label for="coffee">Favorite Coffee</label>
-              <select name="coffee" id="coffee" multiple size="5">
-                <optgroup label="Coffees">
-                  <option value="regular coffee">Regular Coffee</option>
-                  <option value="iced coffee">Iced Coffee</option>
-                </optgroup>
-                <optgroup label="Spresso Drinks">
-                  <option value="latte" selected>Latte</option>
-                  <option value="cappuccino">Cappuccino</option>
-                  <option value="cotado">Cortado</option>
-                  <option value="americano">Americano</option>
-                </optgroup>
-                <option value="other">Other</option>
-              </select>
-            </p>
-            <p>
-              <label for="coffee">Favorite Coffee</label>
-              <input type="text" name="coffee" id="coffee" list="coffee-list">
-              <datalist id="coffee-list">
-                <option value="coffee">
-                <option value="latte">
-                <option value="espresso">
-                <option value="cortado">
-                <option value="americano">
-                <option value="other">
-              </datalist>
-            </p>
+          </fieldset>
           </form>
         </article>
     </main>
